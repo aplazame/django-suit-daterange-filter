@@ -15,7 +15,7 @@ class DateRangeForm(forms.Form):
         Automaticaly generate form fields with dynamic names based on the filtering field name
         """
         self.field_name = kwargs.pop('field_name', 'date')
-        super().__init__(*args, **kwargs)
+        super(DateRangeForm, self).__init__(*args, **kwargs)
 
         self.fields['%s_start' % self.field_name] = forms.DateField(
             widget=SuitDateWidget, label=pgettext('date', 'From'), required=False)
