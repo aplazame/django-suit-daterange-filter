@@ -58,7 +58,7 @@ class DateRangeFilter(admin.FieldListFilter):
 
     def choices(self, cl):
         return [{
-            'query_string': [],
+            'query_string': '',
         }]
 
     def get_form(self, request):
